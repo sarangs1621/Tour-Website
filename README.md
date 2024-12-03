@@ -178,6 +178,6 @@ This project is licensed under the **MIT License**. Feel free to use, modify, an
 For inquiries, please contact:
 
 - **Email**: [sarangnsair1621@gmail.com](mailto:sarangsnair1621@gmail.com)
-- **GitHub**: [Your GitHub Profile](https://github.com/sarangs1621)
+- **GitHub**: [https://github.com/sarangs1621](https://github.com/sarangs1621)
 
 ---
