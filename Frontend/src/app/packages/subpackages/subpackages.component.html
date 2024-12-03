@@ -1,0 +1,18 @@
+<div class="p-[36px]">
+  <p class="text-3xl sm:text-6xl font-text text-center tracking-wide">{{subId | titlecase}}</p>
+  <div class="flex md:flex-row flex-col flex-wrap items-center justify-center gap-[50px] mt-[20px] md:p-[20px] rounded-2xl">
+    <div class="!p-0 md:w-[25%] w-full cursor-pointer hover:brightness-95 hover:scale-95 h-[500px]" *ngFor="let items of eachPackages | async; let i = index"
+          [routerLink]="['/packages', subId ,items.id]">
+      <div class="flex flex-col justify-between">
+        <img class="h-[250px]" src="{{items.image}}" alt="packages image">
+        <div class="bg-[#708090] text-white/60 p-[36px] h-[250px]">
+          <p class="text-center tracking-widest text-2xl text-white">{{items.place}}</p>
+          <p class="text-justify tracking-wide text-sm my-[16px]">{{items.description}}</p>
+          <div class="flex flex-row justify-between items-center">
+            <p class="text-center text-white/87">{{items.days}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

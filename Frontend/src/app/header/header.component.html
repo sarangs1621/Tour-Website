@@ -1,0 +1,101 @@
+<div class="font-text relative">
+  <mat-toolbar
+    color="primary"
+    [ngClass]="{'nav_bar_onchange': hasScrolled}"
+    class="nav_bar flex flex-col justify-between sm:justify-center sm:flex-row"
+  >
+    <button
+      role="button"
+      aria-label="Menu Button"
+      mat-icon-button
+      fxHide.gt-sm
+      (click)="toogleSideNav()"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+
+    <!-- Admin Tab (Visible only if user is admin) -->
+    <span
+      *ngIf="isAdmin"
+      fxHide.lt-sm
+      class="header-line relative tracking-widest"
+      routerLink="/admin"
+      routerLinkActive="nav_bar--active"
+      aria-label="Admin Dashboard Tab"
+    >
+      ADMIN
+    </span>
+
+    <!-- Other Tabs -->
+    <span
+      fxHide.lt-sm
+      class="header-line relative tracking-widest"
+      routerLink="/home/home"
+      routerLinkActive="nav_bar--active"
+      [class.disabled]="!isLoggedIn"
+      aria-label="Home Tab"
+    >
+      HOME
+    </span>
+    <span
+      fxHide.lt-sm
+      class="header-line relative tracking-widest"
+      routerLink="/travel_info"
+      routerLinkActive="nav_bar--active"
+      [class.disabled]="!isLoggedIn"
+      aria-label="Travel information Tab"
+    >
+      TRAVEL INFO
+    </span>
+    <span
+      fxHide.lt-sm
+      class="header-line relative tracking-widest"
+      routerLink="/packages/packages"
+      routerLinkActive="nav_bar--active"
+      [class.disabled]="!isLoggedIn"
+      aria-label="Packages Tab"
+    >
+      PACKAGES
+    </span>
+    <span
+      fxHide.lt-sm
+      class="header-line relative tracking-widest"
+      routerLink="/about_us/about_us"
+      routerLinkActive="nav_bar--active"
+      [class.disabled]="!isLoggedIn"
+      aria-label="About us Tab"
+    >
+      ABOUT US
+    </span>
+    <span
+      fxHide.lt-sm
+      class="header-line relative tracking-widest"
+      routerLink="/faq"
+      routerLinkActive="nav_bar--active"
+      [class.disabled]="!isLoggedIn"
+      aria-label="Frequent asked questions and answers"
+    >
+      FAQ
+    </span>
+    <span
+      fxHide.lt-sm
+      class="header-line relative tracking-widest"
+      routerLink="/contact_us/contact_us"
+      routerLinkActive="nav_bar--active"
+      [class.disabled]="!isLoggedIn"
+      aria-label="Contact us Tab"
+    >
+      CONTACT US
+    </span>
+
+    <!-- Logout Button (Visible if logged in) -->
+    <span *ngIf="isLoggedIn" fxHide.lt-sm class="header-line relative tracking-widest login-button">
+      <button (click)="logout()">LOGOUT</button>
+    </span>
+
+    <!-- Login Button (Visible if not logged in) -->
+    <span *ngIf="!isLoggedIn" fxHide.lt-sm class="header-line relative tracking-widest login-button">
+      <button routerLink="/login" aria-label="Login Button">LOGIN</button>
+    </span>
+  </mat-toolbar>
+</div>

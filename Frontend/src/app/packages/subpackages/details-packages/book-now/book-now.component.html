@@ -1,0 +1,48 @@
+<form action="" [formGroup]="form">
+  <div mat-dialog-title class="p-[16px] bg-[slategray]">
+    <h2 class="text-[white]">{{title}}</h2>
+  </div>
+  <mat-dialog-content class="!px-[24px]">
+    <div>
+      <mat-form-field class="w-full">
+        <mat-label>Focal Name</mat-label>
+        <input matInput type="text" name="focal name" formControlName="focal_name">
+      </mat-form-field>
+      <mat-form-field class="w-full">
+        <mat-label>Email</mat-label>
+        <input matInput type="text" name="email" formControlName="email">
+      </mat-form-field>
+      <mat-form-field class="w-full mr-[20px] sm:w-[47%]">
+        <input matInput type="date" name="arrival date" formControlName="arrival_date">
+        <mat-label>Arrival Date</mat-label>
+      </mat-form-field>
+      <mat-form-field class="w-full sm:w-[47%]">
+        <mat-label>Departure Date</mat-label>
+        <input matInput type="date" name="Departure date" formControlName="departure_date">
+      </mat-form-field>
+      <mat-form-field class="w-full">
+        <mat-label>Pax</mat-label>
+        <input matInput type="number" name="group size" formControlName="head_count">
+      </mat-form-field>
+      <mat-form-field class="w-full">
+        <mat-label>Contact Address</mat-label>
+        <input matInput type="text" name="Contact Address" formControlName="social_media_link">
+      </mat-form-field>
+      <mat-form-field class="w-full">
+        <mat-label>Contact No</mat-label>
+        <input matInput type="text" name="Contact No" formControlName="contact_no">
+      </mat-form-field>
+    </div>
+  </mat-dialog-content>
+  <mat-dialog-actions class="justify-end mb-16">
+    <div class="flex items-center cursor-pointer justify-center rounded-[8px]
+       ml-[16px] px-[16px] md:py-[8px] bg-[#EAECEE] hover:bg-[#F2D7D5] hover:cursor-pointer" (click)="cancel()">
+      <span class="text-black">Cancel</span>
+    </div>
+    <div class="flex items-center cursor-pointer justify-center rounded-[8px]
+       ml-[16px] px-[16px] md:py-[8px] bg-[slategray] hover:cursor-pointer text-white hover:bg-[#B0CAF0]"
+         (click)="confirmation()">
+      <span class="text-white">Book Now</span>
+    </div>
+  </mat-dialog-actions>
+</form>

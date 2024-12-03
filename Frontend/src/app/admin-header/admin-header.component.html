@@ -1,0 +1,22 @@
+<div class="admin-header">
+  <mat-toolbar color="primary" class="admin-toolbar">
+    <span
+      class="header-line"
+      [class.active]="activeTab === 'users'"
+      (click)="setActiveTab('users')"
+      >Users</span
+    >
+    <span
+      class="header-line"
+      [class.active]="activeTab === 'tours'"
+      (click)="setActiveTab('tours')"
+      >Tours</span
+    >
+    <span
+      class="header-line"
+      [class.active]="activeTab === 'queries'"
+      (click)="setActiveTab('queries')"
+      >Queries</span
+    >
+  </mat-toolbar>
+</div>

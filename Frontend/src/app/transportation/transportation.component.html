@@ -1,0 +1,10 @@
+<div class=" flex flex-col justify-center items-center py-[68px]">
+  <p class="text-4xl mx-[16px] text-center">Frequent Asked Questions</p>
+  <p class="text-black/60 mt-[32px] mb-[40px] mx-[24px]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi atque corporis et expedita fuga fugit laborum laudantium nobis reprehenderit repudiandae!</p>
+  <ul *ngFor="let item of faq; let i = index"
+      class="md:w-[70%] w-full p-[40px]"
+      [ngClass]="i % 2 !== 1 ? 'bg-[slategray] text-white' : 'bg-white border-4'">
+    <li class="text-2xl">{{item.title}}</li>
+    <li class="mt-[8px] ml-[16px] text-justify" [ngClass]="i % 2 !== 1 ? 'text-white/60' : 'text-black/60'">{{item.answer}}</li>
+  </ul>
+</div>

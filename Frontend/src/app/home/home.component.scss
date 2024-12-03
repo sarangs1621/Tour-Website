@@ -1,0 +1,34 @@
+.swiper{
+  width: 80%;
+}
+
+::ng-deep.swiper-wrapper {
+  padding-top: 20px;
+  padding-bottom: 50px;
+  padding-right: 20px;
+  height: 500px;
+}
+.test {
+  display: flex;
+  justify-content: center;
+  align-items:center ;
+  width: 100%;
+  height: 100%;
+
+  .img_swiper {
+    height: 100% !important;
+  }
+}
+
+.background {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transform-style: preserve-3d;
+}
+
+::ng-deep.swiper-button-prev:after,
+::ng-deep.swiper-button-next:after {
+  font-size:32px;
+  color: white;
+}

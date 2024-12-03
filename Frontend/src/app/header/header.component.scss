@@ -1,0 +1,47 @@
+.nav_bar {
+  position: fixed;
+  color: white;
+  top: 0;
+  border-bottom:  1px solid rgba(256, 256, 256, .1);
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 4;
+
+  span {
+    width: auto;
+    padding: 16px 28px;
+  }
+}
+
+.nav_bar {
+  &--active {
+    border-bottom: 3px inset #B0CAF0;
+    color: #B0CAF0;
+  }
+
+  &--mobile {
+    color: #B0CAF0;
+  }
+}
+
+.bg--white {
+  background: whitesmoke;
+}
+
+.nav_bar_onchange {
+  background-color: slategrey;
+  color: white;
+}
+
+  ::ng-deep.mat-menu-panel {
+    max-width: 100% !important;
+    background: transparent;
+  }
+  .disabled {
+    pointer-events: none; /* Disable clicks */
+    opacity: 0.5; /* Greyed-out appearance */
+    cursor: not-allowed;
+  }
+  .login-button {
+    justify-content: space-between; /* Push the login/logout button to the right */
+  }

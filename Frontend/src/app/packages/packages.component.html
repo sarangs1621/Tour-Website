@@ -1,0 +1,39 @@
+<div class="mb-[32px] leading-7 p-[24px] md:p-[36px]">
+  <div class="flex md:flex-row flex-col items-center items-center md:p-[16px]">
+    <div class="flex flex-col justify-center items-center md:p-[36px] md:w-[70%]">
+      <p class="md:text-8xl text-4xl !text-left mb-[24px]">We Offer You with!</p>
+      <p class="text-justify leading-7">vibrant Travels and Tours offers a variety of tour packages to explore the beautiful country of Bhutan.
+        Whether you love trekking, cultural experiences, festivals or want a customized trip, there is a package for you.
+        Their tours range from 5 to 11 days, so you can choose the best duration to fit your schedule. vibrant
+        Travels and Tours ensures an unforgettable journey tailored to your interests and preferences. They offer an authentic and
+        immersive adventure, allowing you to experience the enchanting magic of Bhutan. Book your dream trip with them
+        now.</p>
+    </div>
+    <div class="flex flex-row justify-center items-center w-[30%] bg-[#708090] cursor-pointer p-[120px] card-clip" (click)="showPackages()">
+      <div class="flex flex-col justify-center items-center mt-[24px] text-white text-8xl">
+        <i class="fa-solid fa-arrow-down fa-beat"></i>
+        <p class="text-4xl text-center mt-[24px]">Click Me To View Packages</p>
+      </div>
+    </div>
+  </div>
+  <div [class]="{test}" *ngIf="packageShow">
+    <p class="text-6xl font-text text-center tracking-wide">Packages</p>
+    <div class="flex md:flex-row flex-col flex-wrap items-center justify-center gap-[50px] mt-[20px] p-[20px] rounded-2xl">
+      <div class="!p-0 md:w-[25%] w-full h-[500px] bg-no-repeat bg-center bg-cover cursor-pointer hover:brightness-95 hover:scale-95"
+           [style]="{'background-image':'url('+ items.image + ')'}" *ngFor="let items of packagesData; let i = index"
+           (click)="navigateEachComponent(items.label?.toLowerCase())">
+<!--        <img src="./assets/swiper_three.avif">-->
+        <div class="h-full">
+          <div class="flex flex-col justify-between h-full">
+            <p></p>
+            <div class="bg-white py-[8px] px-[16px]">
+              <p class="text-center text-3xl tracking-widest">{{items.label}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

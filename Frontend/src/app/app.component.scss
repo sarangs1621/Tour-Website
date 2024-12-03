@@ -1,0 +1,22 @@
+.parallax {
+  @apply relative h-[80vh] bg-[url("/assets/bhutan.avif")] bg-fixed bg-center bg-no-repeat bg-cover brightness-50 z-[-1];
+}
+
+.parallax-content {
+  transform: translate(-50%, -50%);
+  @apply absolute top-[46%] left-[38%] text-white text-center;
+}
+
+.heading {
+  @apply text-7xl text-white font-extrabold z-[-1];
+}
+
+.relative {
+  position: relative;
+}
+
+.content_bg {
+  background-image: url("/assets/faq.svg");
+  height: fit-content;
+}
+

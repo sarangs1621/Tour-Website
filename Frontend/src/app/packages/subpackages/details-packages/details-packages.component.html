@@ -1,0 +1,56 @@
+<div class="md:p-[60px] flex md:flex-row flex-col">
+  <div class="md:w-[70%] ml-[28px] mr-[28px]">
+    <div class="my-[30px]">
+      <p class="text-4xl md:text-8xl">{{eachPackage | titlecase}}</p>
+      <p class="text-2xl mt-4 md:text-4xl md:mt-8">Detailed Itinerary</p>
+      <p class="mt-[24px] text-justify text-black/60">{{des}}</p>
+    </div>
+    <mat-accordion>
+      <ng-container *ngFor="let obj of details | keyvalue">
+        <mat-expansion-panel class="!mt-[12px] !shadow-none !rounded-none">
+          <mat-expansion-panel-header class="flex flex-row justify-between text-white bg-[#708090] !py-[20px] h-[78px]">
+            <mat-panel-title>
+              <span class="!leading-7 text-white">{{obj.key | uppercase}}: {{obj.value?.title | titlecase}} </span>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="md:p-[30px] p-[26px]">
+            <p class="text-justify text-black/60">{{obj.value?.plan}}</p>
+          </div>
+        </mat-expansion-panel>
+      </ng-container>
+    </mat-accordion>
+  </div>
+  <div class="md:w-[40%] w-full md:ml-[30px] pl-[40px]">
+    <h3 class="text-black/87 !text-xl mt-[30px]">Whats Included?</h3>
+    <ul class="leading-11 text-black/60 list-disc p-[24px]">
+      <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, expedita?</li>
+      <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, expedita?</li>
+      <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, expedita?</li>
+      <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, expedita?</li>
+      <li>Lorem ipsum dolor sit amet, consectetur sadipisicing elit. Beatae, expedita?</li>
+      <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, expedita?</li>
+      <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, expedita?</li>
+    </ul>
+    <h3 class="text-black/87 !text-xl">Whats Not Included?</h3>
+    <ul class="leading-11 text-black/60 list-disc p-[24px]">
+      <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, expedita?</li>
+      <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, expedita?</li>
+    </ul>
+    <div class="flex flex-row gap-5 mb-[20px]">
+      <div class="flex cursor-pointer justify-center md:px-[20px] px-[10px] md:py-[15px]
+       py-[8px] bg-[#708090] text-white md:w-[250px] w-[180px]">
+        <span class="text-white">10 Days, 9 Nights</span>
+      </div>
+      <div class="flex items-center cursor-pointer justify-center
+       px-[20px] md:py-[15px] bg-[#708090] text-white  hover:bg-[#B0CAF0]" (click)="openBookModal()">
+        <span class="text-white">Book Now</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--<div *ngIf="details">-->
+<!--    <p>{{details.details}}</p>-->
+<!--    <p>{{details.id}}</p>-->
+<!--    <p>{{details.iternary}}</p>-->
+<!--</div>-->

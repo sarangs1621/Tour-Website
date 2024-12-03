@@ -1,0 +1,14 @@
+
+@media(max-width: 600px) {
+  .transportation {
+    &--img {
+      width: 100vw;
+    }
+  }
+}
+
+::ng-deep ul {
+  list-style: disc;
+}
+
+

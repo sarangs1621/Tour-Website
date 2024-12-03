@@ -1,0 +1,53 @@
+<div class="md:p-[36px]">
+  <div>
+    <p class="md:text-6xl mt-[16px] text-4xl  font-text text-center mb-[16px]">Glimpse of Bhutan</p>
+    <swiper [config]="swiperOptions" class="swiper">
+      <ng-template swiperSlide *ngFor="let item of backgroundImage">
+        <mat-card class="test mr-[20px] !p-0 cursor-pointer hover:shadow-xl
+         hover:scale-95 w-full h-[full]">
+          <mat-card-content class="h-full w-full">
+            <div class="text-justify font-text p-[16px] bg-blue-300 background h-full w-full flex flex-col
+             justify-between items-center"
+                 [ngStyle]="{'background-image':'url('+ item.image +')'}">
+              <span></span>
+              <p class="text-black text-md py-[8px] px-[24px] bg-white/70">{{item.description}}</p>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </ng-template>
+    </swiper>
+  </div>
+
+  <div class="md:flex md:flex-row leading-7 bg-[#708090] text-white/70 mt-[36px] md:mx-[68px] p-[24px]">
+    <div class="flex justify-center items-center md:w-[30%] md:ml-[80px] p-[16px]">
+      <p class="text-4xl md:text-7xl text-white tracking-widest">About Bhutan</p>
+    </div>
+    <div class="md:w-[60%] md:p-[4rem] flex flex-col justify-center items-center md:ml-[100px]">
+      <h3 class="mb-[24px] text-center text-2xl md:text-4xl font-bold tracking-wide">The Land Of Thunder Dragon</h3>
+      <p class="text-justify md:tracking-wide md:leading-7">Bhutan, a hidden kingdom nestled in the towering Himalayan range, is a highly coveted
+        destination that even seasoned travelers consider a privilege to visit. The region boasts of ancient sacred monasteries perched on sheer cliffs,
+        colorful prayer flags lining mountain ridges, and red-robed in distant temples. During Buddhist festivals,
+        vibrant masked dancers perform ancient rituals on sacred Dzong (fortress) grounds. The people of Bhutan have
+        a rich cultural heritage that is deeply rooted in their timeless identity. Despite opening its doors to tourism
+        in 1974, the number of visitors is kept to an environmentally sustainable level through government-regulated tariffs.
+        Bhutan is a predominantly Buddhist kingdom, with its people renowned for their happiness and proud of their national costume. vibrant Tours and Travels offers a unique opportunity
+        to explore the awe-inspiring mysteries of the land, from snow-clad mountains, lush valleys, dense forests, and rushing streams to hidden rituals in remote monasteries
+        and the daily life in far-flung rural communities. vibrant Tours and Travels provides access to the dream Himalayan adventure.
+      </p>
+    </div>
+  </div>
+  <div class="flex text-black">
+    <div class="md:w-[70%] md:p-[6rem] p-[24px]">
+      <p class="md:text-8xl text-4xl font-text mb-[16px] tracking-wide">What We Do?</p>
+      <p class="text-justify text-black/60 md:tracking-wide md:leading-7">Opportunities for challenging hikes and pleasant strolls are scattered all over this planet; you just need to know where to find them. We do. Kilimanjaro, Everest Base Camp, Patagonia, and the Inca Trail are out there, waiting for you to walk all over them. We’re proud of our record of successful ascents (over 92% of our travellers make it to the top of Kili, depending on the route), but it’s our CEOs and local guides that make the journey itself as memorable as the summit. And if you’re not into big climbs, don’t sweat it; we’ve got loads of lower-impact walks and iconic treks you’ll love, too.</p>
+      <div class="mt-[30px] flex flex-row justify-evenly">
+        <div class="flex flex-col items-center text-4xl md:text-6xl" *ngFor="let item of icon">
+          <i class="{{item.icon}}"></i>
+          <p class="mt-[8px] text-2xl md:text-4xl">{{item.name}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,54 @@
+<div class="flex flex-col justify-center items-center contact-us font-medium p-[36px]">
+  <h1 class="my-[24px]">Contact Us</h1>
+  <p class="my-[16px] text-justify text-black/60">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias architecto corporis dicta ducimus illum laborum minus molestiae possimus sapiente veritatis.</p>
+  <div class="contact-us__form flex md:flex-row flex-col">
+    <div class="md:w-[40%]">
+      <p class="contact-us__heading">Reach To Us</p>
+      <div class="flex flex-row flex-wrap" [formGroup]="form" (ngSubmit)="send()">
+        <mat-form-field class="form-filed w-full">
+          <mat-label>First Name</mat-label>
+          <input matInput type="text" formControlName="first_name" placeholder="first name">
+        </mat-form-field>
+        <mat-form-field class="form-filed w-full">
+          <mat-label>Last Name</mat-label>
+          <input matInput type="text" formControlName="last_name" placeholder="last name">
+        </mat-form-field>
+        <mat-form-field class="form-filed w-full">
+          <mat-label>Email</mat-label>
+          <input matInput type="email" formControlName="email" name="email" placeholder="email">
+        </mat-form-field>
+        <mat-form-field class="form-filed w-full">
+          <mat-label>Contact No</mat-label>
+          <input matInput type="text" formControlName="whatsapp_no" name="contact No" placeholder="Contact No">
+        </mat-form-field>
+        <mat-form-field class="form-filed w-full">
+          <mat-label>Number of Tourist</mat-label>
+          <input matInput type="number" formControlName="tourist_no" name="Number of Tourist" placeholder="number of tourist">
+        </mat-form-field>
+        <mat-form-field class="w-full">
+          <mat-label>Message</mat-label>
+          <textarea matInput rows="8" formControlName="message" placeholder="Message"></textarea>
+        </mat-form-field>
+        <button type="submit" (click)="send()" mat-button class="bg-[slategray] active:bg-blue-300 text-white !py-[10px] !px-[80px]">Submit</button>
+      </div>
+    </div>
+    <div class="md:w-[50%] w-full md:ml-[36px] mt-[16px] p-[24px] bg-[slategray] text-white/70 mr-[50px] flex justify-center items-center">
+      <div class="flex flex-col">
+        <p class="text-4xl text-white">Contact Details</p>
+        <div class="mt-[24px] ml-[16px]">
+          <address style="text-size: 80%" zzrole="document">
+            <br> Kollam<br> India<br>
+            <i class="fa fa-phone mt-[8px]"></i>: +975 17 44 37 88<br>
+            <i class="fa fa-fax my-[8px]"></i>: +975 02 33 44 32<br>
+            <a href="mailto:confusion@food.net">Vibrant@gmail.com</a>
+          </address>
+        </div>
+        <div class="flex flex-row mt-[24px] ml-[16px] gap-8">
+          <a mat-icon-button aria-label="link to facebook-account" role="link" class="btn-facebook text-3xl" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook fa-lg"></i></a>
+          <a mat-icon-button aria-label="link to email-account" role="link" class="btn-google-plus text-3xl" href="http://google.com/+"><i class="fa fa-envelope-o fa-lg"></i></a>
+          <a mat-icon-button aria-label="link to linkedin account" role="link" class="btn-linkedin text-3xl" href="http://www.linkedin.com/in/"><i class="fa fa-whatsapp fa-lg"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
